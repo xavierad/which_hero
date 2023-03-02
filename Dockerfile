@@ -1,4 +1,4 @@
-FROM  python:3.10-slim-bullseye
+FROM  python:3.6.13
 
 RUN apt-get update && \
     apt-get -y upgrade && \
@@ -6,7 +6,7 @@ RUN apt-get update && \
         libpq-dev\
         python-dev
 
-WORKDIR /web_app
+WORKDIR /which_hero
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt 
